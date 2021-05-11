@@ -59,4 +59,20 @@ __NB__ : Pour lancer l'application, ne pas oublier de faire un `symfony serve` d
         > Au singulier.
 
 # 5. CUSTOMISATION DE LA VUE:
- * À l'aide de Bootstrap, nous allons par la suite personnalisé la vue (dossier template) de notre application
+ * À l'aide de Bootstrap, nous allons par la suite personnalisé la vue (dossier template) de notre application.
+    - Dans le dossier `public`, on créer un dossier `css` contenant notre personnel `style.css`.
+    - Dans le dossier `src/templates`, on importe le framework Bootstrap dans notre fichier `base.html.twig`
+    - Dans le dossier `config/packages` on ajoute au fichier `twig.yaml` la ligne suivante de code:
+        ```yaml
+         form_themes: ["bootstrap_4_layout.html.twig"]
+        ```
+    
+ * Ensuite, on personnalise le style des pages à notre goût.
+
+### Commentaires pour le prof:
+    - Suite à la création du CRUD pour Musee, j'ai une erreur quand j'essaye de créer/modifier un musée comme quoi la propriété "ville" dans l'entité Ville ne peut pas être lue.
+        > Après diverses tentatives, je n'ai pas réussi à résoudre cette erreur. Celle-ci m'empêche d'avancer dans le sujet du contrôle et d'ajouter les contraintes au formulaire ainsi que les msg flash...
+    
+    - J'ai choisi de ne pas avoir toutes les informations de chaque musée sur la page index car sinon ça ne ferait aucun sens d'avoir une page detail.
+
+    - Dans la page detail, je n'arrive pas a mettre l'image. J'ai essayé avec l'url ainsi qu'avec un fichier local (dans public/images), mais à la place de l'image s'affiche un texte "Resource id #716".

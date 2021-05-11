@@ -28,7 +28,7 @@ class AppFixtures extends Fixture
         $data = [
             [
                 "nom" => "Louvre",
-                "photo" => "https://commons.wikimedia.org/wiki/File:Paris_75001_Cour_Napol%C3%A9on_Louvre_Aile_Turgot_02b_20141107_125236.jpg?uselang=fr",
+                "photo" => "url(https://cdn2.civitatis.com/francia/paris/entrada-museo-louvre-grid.jpg)",
                 "adresse" => "Rue de Rivoli, 75001 Paris",
                 "prix" => "17 €",
                 "presentation" => "Le Musée du Louvre, situé à Paris, est le musée d'art le plus visité du monde, en plus d'être un monument historique et un musée national de la France. Il s'agit d'un repère central, situé sur la rive droite de la Seine dans le 1er arrondissement."

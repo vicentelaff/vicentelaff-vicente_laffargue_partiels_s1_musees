@@ -3,8 +3,10 @@
 namespace App\Form;
 
 use App\Entity\Musee;
+use App\Entity\Ville;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class MuseeType extends AbstractType
@@ -17,7 +19,11 @@ class MuseeType extends AbstractType
             ->add('adresse')
             ->add('prix')
             ->add('presentation')
-            ->add('ville')
+            ->add('ville', EntityType::class, [
+                "class" => Ville::class,
+                "choice_label" => "ville",
+                "label" => "Ville:"
+            ])
         ;
     }
 

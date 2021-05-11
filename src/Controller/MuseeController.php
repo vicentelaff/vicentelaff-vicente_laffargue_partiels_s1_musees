@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/musee')]
+#[Route('/')]
 class MuseeController extends AbstractController
 {
     #[Route('/', name: 'musee_index', methods: ['GET'])]

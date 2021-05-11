@@ -23,11 +23,6 @@ class Musee
     private $nom;
 
     /**
-     * @ORM\Column(type="blob")
-     */
-    private $photo;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $adresse;
@@ -48,6 +43,11 @@ class Musee
      */
     private $ville;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $photo;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -61,18 +61,6 @@ class Musee
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
-
-        return $this;
-    }
-
-    public function getPhoto()
-    {
-        return $this->photo;
-    }
-
-    public function setPhoto($photo): self
-    {
-        $this->photo = $photo;
 
         return $this;
     }
@@ -121,6 +109,18 @@ class Musee
     public function setVille(?Ville $ville): self
     {
         $this->ville = $ville;
+
+        return $this;
+    }
+
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(string $photo): self
+    {
+        $this->photo = $photo;
 
         return $this;
     }
