@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Musee{% endblock %}
+
+{% block body %}
+    <h1>Musee</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ musee.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ musee.nom }}</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>{{ musee.photo }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ musee.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ musee.prix }}</td>
+            </tr>
+            <tr>
+                <th>Presentation</th>
+                <td>{{ musee.presentation }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('musee_index') }}">back to list</a>
+
+    <a href="{{ path('musee_edit', {'id': musee.id}) }}">edit</a>
+
+    {{ include('musee/_delete_form.html.twig') }}
+{% endblock %}
